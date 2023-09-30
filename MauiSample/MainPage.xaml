@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:MauiSample"
+             x:DataType="viewmodel:ViewModel"
+             x:Class="MauiSample.MainPage">
+
+    <ContentPage.BindingContext>
+        <viewmodel:ViewModel />
+    </ContentPage.BindingContext>
+
+    <CollectionView ItemsSource="{Binding Items}" >
+
+        <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="x:String">
+                <HorizontalStackLayout HeightRequest="30">
+
+                    <!-- Loads label with binding -->
+                    <Label WidthRequest="100" Text="{Binding}" />
+                    <Label WidthRequest="100" Text="{Binding}" />
+                    <Label WidthRequest="100" Text="{Binding}" />
+                    <Label WidthRequest="100" Text="{Binding}" />
+                    <Label WidthRequest="100" Text="{Binding}" />
+                    <Label WidthRequest="100" Text="{Binding}" />
+                    <Label WidthRequest="100" Text="{Binding}" />
+                    <Label WidthRequest="100" Text="{Binding}" />
+                    <Label WidthRequest="100" Text="{Binding}" />
+                    <Label WidthRequest="100" Text="{Binding}" />
+
+                     <!-- Loads label without binding -->
+                     <!--<Label WidthRequest="100" Text="Label" />
+                     <Label WidthRequest="100" Text="Label" />
+                     <Label WidthRequest="100" Text="Label" />
+                     <Label WidthRequest="100" Text="Label" />
+                     <Label WidthRequest="100" Text="Label" />
+                     <Label WidthRequest="100" Text="Label" />
+                     <Label WidthRequest="100" Text="Label" />
+                     <Label WidthRequest="100" Text="Label" />
+                     <Label WidthRequest="100" Text="Label" />
+                     <Label WidthRequest="100" Text="Label" />-->
+                </HorizontalStackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+
+</ContentPage>
